@@ -1,7 +1,7 @@
 <template>
     <div class="py-10 prose">
         <nav class="flex justify-between items-center prose mb-4">
-            <h1 class="mb-0 fond-bold">Mes liens</h1>
+            <h1 class="mb-0 fond-extra text-3xl">Mes liens</h1>
             <div class="flex">
                 <Searchinput :model-value="search"></Searchinput>
                 <NuxtLink to="/links/create" class="no-underline px-4 py-2 text-white bg-gray-600  hover:bg-gray-800 rounded-md transition">
@@ -27,13 +27,14 @@
             <tbody>
                 <tr c v-for="link in links" :key="link.id">
                     <td>
-                        <a :href="link.full_links" target="_blank" >
-                            {{link.full_links}}
-                        </a>
-                    </td>
-                    <td>
                         <a :href="`${useRuntimeConfig().public.appUrl}/${link.short_links}`" target="_blank">
                             {{ `${useRuntimeConfig().public.appUrl.replace(/^http(s?):\/\//, "")}/${link.short_links}` }}
+                        </a>
+                      
+                    </td>
+                    <td>
+                        <a :href="link.full_links" target="_blank" >
+                            {{link.full_links}}
                         </a>
                     </td>
                     <td>
@@ -76,28 +77,28 @@
   <script lang="ts" setup>
   const links = [
    {
-    'full_links' : 'qsdkfmqs',
+    'full_links' : 'web.skype.com/',
     'id': 1,
-    'short_links':'sdfqdfqsdf',
-    'views':'dfsdqfsdf',
+    'short_links':'skype',
+    'views':'3005M',
    },
    {
-    'full_links' : 'qsdkfmqs',
+    'full_links' : 'catarina.vippinterstis.com/',
     'id': 2,
     'short_links':'sdfqdfqsdf',
-    'views':'dfsdqfsdf',
+    'views':'6259M',
    },
    {
-    'full_links' : 'qsdkfmqs',
+    'full_links' : 'mail.google.com/',
     'id': 3,
-    'short_links':'sdfqdfqsdf',
-    'views':'dfsdqfsdf',
+    'short_links':'google',
+    'views':'2225K',
    },
    {
-    'full_links' : 'qsdkfmqs',
+    'full_links' : 'www.youtube.com/',
     'id': 4,
-    'short_links':'sdfqdfqsdf',
-    'views':'dfsdqfsdf',
+    'short_links':'youtube',
+    'views':'5298M',
    },
   ]
 
