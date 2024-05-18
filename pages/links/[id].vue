@@ -16,7 +16,7 @@
                 </div>
                 <input type="text">
             </label>
-            <button></button>
+            <button>Soumettre</button>
         </form>
     </div>
   </template>

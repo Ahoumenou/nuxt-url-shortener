@@ -59,6 +59,9 @@
                 </tr>
             </tbody>
           </table>
+          <ContentList path="/index"/>
+          <div>
+      </div>
       </div>
       <div v-else>
         <p>
